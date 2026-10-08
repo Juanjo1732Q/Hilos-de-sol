@@ -1,0 +1,6 @@
+{
+  "name": "Hilos de Sol - Tejidos & Gestión Artesanal",
+  "description": "Aplicación web de comercio y gestión artesanal para Hilos de Sol, con catálogo interactivo, roles de Administrador y Comprador, y dashboard de analítica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

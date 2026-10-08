@@ -1,0 +1,225 @@
+import { Product, Transaction, User } from '../types';
+
+export const ADMIN_CREDENTIALS = {
+  email: 'juanjosequinteroreyes8@gmail.com',
+  password: '573015137667',
+};
+
+export const INITIAL_USERS: User[] = [
+  {
+    id: 'user-admin-1',
+    username: 'juanjosequinteroreyes8@gmail.com',
+    name: 'Juan José Quintero Reyes',
+    email: 'juanjosequinteroreyes8@gmail.com',
+    role: 'admin',
+    avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
+  },
+  {
+    id: 'user-buyer-1',
+    username: 'comprador',
+    name: 'Camila Restrepo',
+    email: 'camila.restrepo@gmail.com',
+    role: 'buyer',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+  },
+  {
+    id: 'user-buyer-2',
+    username: 'andres_tejidos',
+    name: 'Andrés Navarro',
+    email: 'andres.navarro@hotmail.com',
+    role: 'buyer',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+  }
+];
+
+export const INITIAL_PRODUCTS: Product[] = [
+  {
+    id: 'prod-ref-a',
+    referenceCode: 'REF-A-01',
+    title: 'Frascos de vidrio con funda crochet y flores',
+    description: 'Frascos conserveros reciclados vestidos con fundas tejidas a mano en hilo de algodón crudo y terracota, con apliques de flores silvestres. Ideales para velas, especias o floreros.',
+    category: 'Frascos Decorados',
+    price: 38000,
+    stock: 14,
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjazB1aVNu_lt44mr3Muq8_ZrhZYSqv7m93tW2vbuMSIBVLWkrRJkV18&s=10',
+    featured: true,
+    createdAt: '2026-02-10',
+  },
+  {
+    id: 'prod-ref-b',
+    referenceCode: 'REF-B-02',
+    title: 'Amigurumis con forma de abejas',
+    description: 'Tiernas abejitas tejidas a mano con técnica amigurumi japonesa. Confeccionadas con hilaza premium mostaza y negro, alas en tono crudo y relleno hipoalergénico.',
+    category: 'Amigurumis',
+    price: 45000,
+    stock: 9,
+    imageUrl: 'https://i.etsystatic.com/53790665/r/il/480dd2/6974810346/il_fullxfull.6974810346_8d7k.jpg',
+    featured: true,
+    createdAt: '2026-02-14',
+  },
+  {
+    id: 'prod-ref-c',
+    referenceCode: 'REF-C-03',
+    title: 'Llaveros tejidos de arcoíris y mariposas',
+    description: 'Dúo de llaveros artesanales en ganchillo fino. Incluye un arcoíris en tonos cálidos terracota/mostaza y una delicada mariposa con herrajes dorados resistentes.',
+    category: 'Llaveros',
+    price: 22000,
+    stock: 25,
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZh4oBs6VQED3gtGuwa9-UtVWBF6dGD__tdFdG_Dw5EtJWrwxGl8bdckI&s=10',
+    featured: true,
+    createdAt: '2026-03-01',
+  },
+  {
+    id: 'prod-ref-d',
+    referenceCode: 'REF-D-04',
+    title: 'Juego de posavasos florales en hilo natural',
+    description: 'Set de 4 posavasos tejidos en punto estrella con borde festoneado. Hilaza 100% algodón absorbente en tono crudo con ribete terracota.',
+    category: 'Accesorios',
+    price: 32000,
+    stock: 18,
+    imageUrl: 'https://i.etsystatic.com/24322407/r/il/3209ac/6959063136/il_fullxfull.6959063136_t8bv.jpg',
+    featured: false,
+    createdAt: '2026-03-08',
+  },
+  {
+    id: 'prod-ref-e',
+    referenceCode: 'REF-E-05',
+    title: 'Amigurumi Osito Vintage Terracota',
+    description: 'Oso artesanal tejido con bufanda en hilo mostaza y cuerpo terracota rústico. Ojos con traba de seguridad e hilado suave al tacto.',
+    category: 'Amigurumis',
+    price: 52000,
+    stock: 6,
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzDBVLYkDRtEFhmWpiYE9suEnqZcfVlo6KzZ1JzNaW5IDjD9OVgJFwiZ-c&s=10',
+    featured: false,
+    createdAt: '2026-03-15',
+  },
+  {
+    id: 'prod-ref-f',
+    referenceCode: 'REF-F-06',
+    title: 'Frasco boticario con capuchón bordado',
+    description: 'Elegante frasco de cristal ámbar cubierto con malla calada de crochet color mostaza claro. Perfecto para popurrí aromático o tesoros pequeños.',
+    category: 'Frascos Decorados',
+    price: 41000,
+    stock: 11,
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROm1yVc1whKvMrFStjUSs-mu4Nq5wTYSeCkSkMmfrW_PWPpNSH1LkYlQvY&s=10',
+    featured: false,
+    createdAt: '2026-03-22',
+  }
+];
+
+export const INITIAL_TRANSACTIONS: Transaction[] = [
+  {
+    id: 'tx-1001',
+    orderNumber: 'HS-2026-891',
+    customerName: 'Camila Restrepo',
+    customerEmail: 'camila.restrepo@gmail.com',
+    productTitle: 'Amigurumis con forma de abejas',
+    quantity: 2,
+    date: '2026-04-02',
+    amount: 90000,
+    status: 'Completada',
+    paymentMethod: 'PSE',
+  },
+  {
+    id: 'tx-1002',
+    orderNumber: 'HS-2026-892',
+    customerName: 'Andrés Navarro',
+    customerEmail: 'andres.navarro@hotmail.com',
+    productTitle: 'Frascos de vidrio con funda crochet y flores',
+    quantity: 1,
+    date: '2026-04-03',
+    amount: 38000,
+    status: 'Enviada',
+    paymentMethod: 'Tarjeta de Crédito',
+  },
+  {
+    id: 'tx-1003',
+    orderNumber: 'HS-2026-893',
+    customerName: 'Mariana Duarte',
+    customerEmail: 'mariana.d@outlook.com',
+    productTitle: 'Llaveros tejidos de arcoíris y mariposas',
+    quantity: 3,
+    date: '2026-04-04',
+    amount: 66000,
+    status: 'Completada',
+    paymentMethod: 'Transferencia',
+  },
+  {
+    id: 'tx-1004',
+    orderNumber: 'HS-2026-894',
+    customerName: 'Valentina Osorio',
+    customerEmail: 'valen.osorio@yahoo.es',
+    productTitle: 'Amigurumi Osito Vintage Terracota',
+    quantity: 1,
+    date: '2026-04-05',
+    amount: 52000,
+    status: 'Completada',
+    paymentMethod: 'Tarjeta de Crédito',
+  },
+  {
+    id: 'tx-1005',
+    orderNumber: 'HS-2026-895',
+    customerName: 'Juan Pablo Meza',
+    customerEmail: 'jpmeza92@gmail.com',
+    productTitle: 'Juego de posavasos florales en hilo natural',
+    quantity: 2,
+    date: '2026-04-06',
+    amount: 64000,
+    status: 'En Proceso',
+    paymentMethod: 'PSE',
+  },
+  {
+    id: 'tx-1006',
+    orderNumber: 'HS-2026-896',
+    customerName: 'Lucía Fernández',
+    customerEmail: 'lucia.fer@gmail.com',
+    productTitle: 'Frascos de vidrio con funda crochet y flores',
+    quantity: 2,
+    date: '2026-04-06',
+    amount: 76000,
+    status: 'Completada',
+    paymentMethod: 'Transferencia',
+  }
+];
+
+export const MONTHLY_SALES_TREND = [
+  { mes: 'Nov 2025', ventas: 890000, clientes: 18 },
+  { mes: 'Dic 2025', ventas: 1720000, clientes: 34 },
+  { mes: 'Ene 2026', ventas: 1150000, clientes: 22 },
+  { mes: 'Feb 2026', ventas: 1480000, clientes: 29 },
+  { mes: 'Mar 2026', ventas: 1890000, clientes: 38 },
+  { mes: 'Abr 2026', ventas: 2150000, clientes: 46 },
+];
+
+export const CURATED_IMAGE_PRESETS = [
+  {
+    name: 'Frasco Crochet con Flores',
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjazB1aVNu_lt44mr3Muq8_ZrhZYSqv7m93tW2vbuMSIBVLWkrRJkV18&s=10',
+    category: 'Frascos Decorados',
+  },
+  {
+    name: 'Abeja Amigurumi Mostaza',
+    url: 'https://i.etsystatic.com/53790665/r/il/480dd2/6974810346/il_fullxfull.6974810346_8d7k.jpg',
+    category: 'Amigurumis',
+  },
+  {
+    name: 'Llaveros Arcoíris y Mariposas',
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZh4oBs6VQED3gtGuwa9-UtVWBF6dGD__tdFdG_Dw5EtJWrwxGl8bdckI&s=10',
+    category: 'Llaveros',
+  },
+  {
+    name: 'Posavasos Florales en Hilo',
+    url: 'https://i.etsystatic.com/24322407/r/il/3209ac/6959063136/il_fullxfull.6959063136_t8bv.jpg',
+    category: 'Accesorios',
+  },
+  {
+    name: 'Osito Tejido Terracota',
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzDBVLYkDRtEFhmWpiYE9suEnqZcfVlo6KzZ1JzNaW5IDjD9OVgJFwiZ-c&s=10',
+    category: 'Amigurumis',
+  },
+  {
+    name: 'Frasco Boticario con Capuchón',
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROm1yVc1whKvMrFStjUSs-mu4Nq5wTYSeCkSkMmfrW_PWPpNSH1LkYlQvY&s=10',
+    category: 'Frascos Decorados',
+  }
+];
